@@ -1,6 +1,6 @@
 ---
-title: "Conditional Access Policy resource type"
-description: "Represents an Azure AD Conditional Access policy. Conditional access Policies are custom rules that define and access scenario:"
+title: "Named Locations API"
+description: "Represents a Named Location."
 localization_priority: Normal
 ---
 
