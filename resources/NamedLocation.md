@@ -4,14 +4,11 @@ description: "Represents a Named Location."
 localization_priority: Normal
 ---
 
-# Conditional Access policy resource type
+# Named Location 
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an Azure AD Conditional Access policy. Conditional access Policies are custom rules that define and access scenario
-
-
-
+Represents an Azure AD NamedLocation. Named Location are customm rules that define Network Locations.
 
 
 
@@ -20,11 +17,11 @@ This policy is described in further detail below.
 ## Methods
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
-| [Get policy](../api/CAPolicies-get.md) |Policy|Read properties and relationships of Conditional Access Policy object.|
-|[Create policy](../api/CAPolicies-post.md)|Policy|Create a new Conditional Access policy object.|
-|[Update policy](../api/CAPolicies-update.md)|None|Update Conditional Access policy object.|
-|[Delete policy](../api/CAPolicies-delete.md)|None|Delete Conditional Access policy object.|
-|[List policies](../api/CAPolicies-list.md)|Policy collection|Get all Conditional Access policy objects in the organization.|
+| [Get ](../api/NamedLocationApi-get.md) |NamedLocation |Read properties and relationships of Conditional Access Policy object.|
+|[Create](../api/NamedLocationApi-post.md)|NamedLocation |Create a new Conditional Access policy object.|
+|[Update](../api/NamedLocationApi-update.md)|None|Update Conditional Access policy object.|
+|[Delete](../api/NamedLocationApi-delete.md)|None|Delete Conditional Access policy object.|
+|[List](../api/NamedLocationApi-list.md)|NamedLocation collection|Get all Conditional Access policy objects in the organization.|
 
 
 
