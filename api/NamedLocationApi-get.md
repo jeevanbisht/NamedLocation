@@ -1,6 +1,6 @@
 ---
-title: "Get "
-description: "Retrieve the properties of a Named Loaction object."
+title: "Get Named Location Entity."
+description: "Retrieve the properties of a Named Location Entity."
 localization_priority: Normal
 ---
 
