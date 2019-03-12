@@ -17,11 +17,11 @@ This policy is described in further detail below.
 ## Methods
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
-| [Get ](../api/NamedLocationApi-get.md) |NamedLocation |Read properties and relationships of Conditional Access Policy object.|
-|[Create](../api/NamedLocationApi-post.md)|NamedLocation |Create a new Conditional Access policy object.|
-|[Update](../api/NamedLocationApi-update.md)|None|Update Conditional Access policy object.|
-|[Delete](../api/NamedLocationApi-delete.md)|None|Delete Conditional Access policy object.|
-|[List](../api/NamedLocationApi-list.md)|NamedLocation collection|Get all Conditional Access policy objects in the organization.|
+| [Get ](../api/NamedLocationApi-get.md) |NamedLocation |Read properties and relationships of Named Location object.|
+|[Create](../api/NamedLocationApi-post.md)|NamedLocation |Create a newNamed Location object.|
+|[Update](../api/NamedLocationApi-update.md)|None|Update Named Location object.|
+|[Delete](../api/NamedLocationApi-delete.md)|None|Delete Named Location object.|
+|[List](../api/NamedLocationApi-list.md)|NamedLocation collection|Get all Named Location object in the organization.|
 
 
 
