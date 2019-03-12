@@ -1,6 +1,6 @@
 ---
-title: "List Policies"
-description: "Retrieve all Conditional Access Policy objects in the directory."
+title: "List a collectoin of Named Location Entity."
+description: "Retrieve all Named Location Entity objects in the directory."
 localization_priority: Normal
 ---
 
@@ -8,7 +8,7 @@ localization_priority: Normal
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Retrieve all [Condition Access policy](../resources/ConditionalAccessPolicies.md) objects in the directory.
+Retrieve all [Condition Access policy](../resources/NamedLocations.md) objects in the directory.
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
