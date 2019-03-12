@@ -18,7 +18,7 @@ This policy is described in further detail below.
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
 | [Get ](../api/NamedLocationApi-get.md) |NamedLocation |Read properties and relationships of Named Location object.|
-|[Create](../api/NamedLocationApi-post.md)|NamedLocation |Create a newNamed Location object.|
+|[Create](../api/NamedLocationApi-post.md)|NamedLocation |Create a new Named Location object.|
 |[Update](../api/NamedLocationApi-update.md)|None|Update Named Location object.|
 |[Delete](../api/NamedLocationApi-delete.md)|None|Delete Named Location object.|
 |[List](../api/NamedLocationApi-list.md)|NamedLocation collection|Get all Named Location object in the organization.|
