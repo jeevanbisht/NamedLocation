@@ -1,6 +1,6 @@
 ---
-title: "Create Conditional Access Policy"
-description: "Create a new Conditional Access Policy object by specifying display name and minimum required parameters."
+title: "Create Named Location Entity Object"
+description: "Create a new Named Location Entity Object by specifying display name and minimum required parameters."
 localization_priority: Normal
 ---
 
@@ -8,7 +8,7 @@ localization_priority: Normal
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [Conditional Access policy](../resources/ConditionalAccessPolicies.md) object by specifying display name, policy type, and policy description.
+Create a new [Named Location](../resources/NamedLocations.md) object by specifying display name, policy type, and policy description.
 
 >Note: The policy details will be validated before being stored. If it does not pass validation, a 400 Bad Request will be returned.
 
@@ -17,14 +17,12 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Directory.AccessAsUser.All    |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Not supported. |
+|Delegated (work or school account) | Policy.ReadWrite.ConditionalAccess    |
 
 ## HTTP request
 
 ```http
-POST /ConditionalAccessPolicies
+POST /namedLocations
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -33,68 +31,58 @@ POST /ConditionalAccessPolicies
 | Content-Type | application/json  | Nature of the data in the body of an entity. Required. |
 
 ## Request body
-In the request body, provide a JSON representation of [Conditional Access policy](../resources/ConditionalAccessPolicies.md) object.
+In the request body, provide a JSON representation of [Named Location](../resources/ConditionalAccessPolicies.md) object.
 
 The following table shows the properties that are required when you create a policy.
 
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
-|definition|String|The string version of the [policy](../resources/ConditionalAccessPolicies.md) object.|
+|definition|String|The string version of the [policy](../resources/namedLoction.md) object.|
 |displayName|String|A custom name for the Conditional Access Policy.|
 
 
 ## Response
 
-If successful, this method returns `201 Created` response code and [Conditional Access Policy](../resources/ConditionalAccessPolicies.md) object in the response body. If unsuccessful, a `4xx` error will be returned with specific details.  
+If successful, this method returns `204` response code and [Named Location](../resources/NamedLocation.md) object in the response body. If unsuccessful, a `4xx` error will be returned with specific details.  
 
 ## Example
-The following example creates a new token lifetime Policy. Notice the string definition parameter
+The following example creates a IP Named Location. Notice the string definition parameter
 has escaped double quotes.
 
 ##### Request
 Here is an example of the request.
 
 ```http
-POST https://graph.microsoft.com/beta/ConditionalAccessPolicies
+POST https://graph.microsoft.com/beta/ipNamedLocation/
 Content-Type: application/json
-
+HTTP/1.1 201 Created
+Content-type: application/json
+POST ~/v1.0/policies/ipNamedLocation/
 {
-
-
+    "displayName": "Remote Offices",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "@odata.type": "#microsoft.graph.iPv4CidrRange",
+            "cidrAddress": "6.5.4.3/16"
+        },
+        {
+            "@odata.type": "#microsoft.graph.iPv4CidrRange",
+            "cidrAddress": "5.4.3.2/16"
+        },
+        {
+            "@odata.type": "#microsoft.graph.iPv4CidrRange",
+            "cidrAddress": "4.3.2.1/16"
+        }
+    ],
 }
+
 ```
 
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
 ```http
-HTTP/1.1 201 Created
-Content-type: application/json
-
-{
-  "@odata.context":"https://graph.microsoft.com/beta/$metadata#policies/$entity",
-  "id":"id-value",
-  "alternativeIdentifier":null,
-  "definition":["{\"TokenLifetimePolicy\":{\"Version\":1,\"AccessTokenLifetime\":\"8:00:00\"}}"],
-  "displayName":"name-value",
-  "isOrganizationDefault":false,
-  "keyCredentials",
-  "type":"TokenLifetimePolicy"
-}
-
 ```
 
-<!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
-2015-10-25 14:57:30 UTC -->
-<!--
-{
-  "type": "#page.annotation",
-  "description": "message: createReply",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": "",
-  "suppressions": [
-    "Error: /api-reference/beta/api/policy-post.md:\r\n      Exception processing links.\r\n    System.ArgumentException: Link Definition was null. Link text: !INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)\r\n      at ApiDoctor.Validation.DocFile.get_LinkDestinations()\r\n      at ApiDoctor.Validation.DocSet.ValidateLinks(Boolean includeWarnings, String[] relativePathForFiles, IssueLogger issues, Boolean requireFilenameCaseMatch, Boolean printOrphanedFiles)"
-  ]
-}
 -->
