@@ -1,6 +1,6 @@
 ---
-title: "Delete a Conditional Access Policy."
-description: "Delete a Conditional Access Policy."
+title: "Delete a Named Location Entity."
+description: "Delete a Named Location Entity."
 localization_priority: Normal
 ---
 
@@ -8,21 +8,21 @@ localization_priority: Normal
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [Conditional Access policy](../resources/ConditionalAccessPolicies.md).
+Delete a [Named Location Entity](../resources/NamedLocation.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Directory.AccessAsUser.All    |
+|Delegated (work or school account) | Policy.ReadWrite.ConditionalAccess    |
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
 
 ## HTTP request
 
 ```http
-DELETE /ConditionalAccessPolicies/{id}
+DELETE /namedLocations/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -43,7 +43,8 @@ The following example deletes a policy.
 Here is an example of the request.
 
 ```http
-DELETE https://graph.microsoft.com/beta/conditionalaccesspolicies/{id}
+DELETE https://graph.microsoft.com/beta/namedLocations/8d1eeee9-3695-480d-8e4f-5139cddff38c
+
 ```
 
 ##### Response
