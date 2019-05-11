@@ -4,23 +4,24 @@ description: "Represents a Named Location."
 localization_priority: Normal
 ---
 
-
-# Methods
-
-| Method | Return  Type | Description |
-|:---------------------|:----------|:-------:|
-| Get 	  | Named Location |Read properties of a Named Location  object. |
-| Create 	| Named Location |Create a new Named Location object. |
-| Update  |	None	|Update Named Location object. |
-| Delete  |	None	|Delete Named Location object. |
-| List   	| Named Location |Collection of all Named Location objects in the organization. |
-
-
-# Named Location 
-
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents an Azure AD NamedLocation. Named Location are customm rules that define Network Locations.
+
+
+
+# Methods
+
+| Method | Return  Type | Description        |
+|:---------------------|:----------|:-------|
+| Get 	  | Named Location | Read properties of a Named Location  object. |
+| Create 	| Named Location | Create a new Named Location object. |
+| Update  |	None	| Update Named Location object. |
+| Delete  |	None	| Delete Named Location object. |
+| List   	| Named Location | Collection of all Named Location objects in the organization. |
+
+
+# Named Location 
 
 
 #### namedLocation
