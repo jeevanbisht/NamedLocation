@@ -53,18 +53,19 @@ has escaped double quotes.
 Here is an example of the request.
 
 ```http
-POST https://graph.microsoft.com/beta/ipNamedLocation/
  {
-            "displayName": "Public Relations Office ",
-            "modifiedDateTime": null,
-            "createdDateTime": null,
-            "isTrusted": false,
-            "ipRanges": [
+  "displayName": "Public Relations Office ",
+  "modifiedDateTime": null,
+  "createdDateTime": null,
+  "isTrusted": false,
+  "ipRanges": [
+              {
+                 "cidrAddress": "12.34.221.11/22"           
+                },
                 {
-                  "cidrAddress": "12.34.221.11/22"
+                 "cidrAddress": "1001:0fc3:23fb:1234::0001/24"
                 }
-            ]
-        }
+ }
 
 ```
 
