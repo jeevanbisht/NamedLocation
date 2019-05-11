@@ -9,11 +9,11 @@ localization_priority: Normal
 
 | Method | Return  Type | Description |
 |:---------------------|:----------|:-------:|
-| Get 	  | Named Location |	Read properties of a Named Location  object. |
-| Create 	| Named Location | Create a new Named Location object. |
-| Update  |	None	| Update Named Location object. |
-| Delete  |	None	| Delete Named Location object. |
-| List   	| Named Location |collection	Get all Named Location objects in the organization. |
+| Get 	  | Named Location |Read properties of a Named Location  object. |
+| Create 	| Named Location |Create a new Named Location object. |
+| Update  |	None	|Update Named Location object. |
+| Delete  |	None	|Delete Named Location object. |
+| List   	| Named Location |Collection of all Named Location objects in the organization. |
 
 
 # Named Location 
