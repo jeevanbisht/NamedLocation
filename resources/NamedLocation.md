@@ -5,15 +5,15 @@ localization_priority: Normal
 ---
 
 
-#Methods
+# Methods
 
-| Method | Return | Type | Description |
-|:---------------|:--------|:----------|:-------:|
-| Get policy	  |Policy |	Read properties and relationships of Conditional Access Policy object. |
-| Create policy	|Policy	|Create a new Conditional Access policy object. |
-| Update policy |	None	|Update Conditional Access policy object. |
-| Delete policy |	None	|Delete Conditional Access policy object. |
-| List policies	|Policy |collection	Get all Named Location objects in the organization. |
+| Method | Return  Type | Description |
+|:---------------------|:----------|:-------:|
+| Get 	  | Named Location |	Read properties of a Named Location  object. |
+| Create 	| Named Location | Create a new Named Location object. |
+| Update  |	None	| Update Named Location object. |
+| Delete  |	None	| Delete Named Location object. |
+| List   	| Named Location |collection	Get all Named Location objects in the organization. |
 
 
 # Named Location 
