@@ -53,7 +53,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 
 {
-    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#namedLocations",
+    "@odata.context": "https://graph.microsoft.com/testidentityprotectionservices/$metadata#namedLocations",
     "@odata.count": 3,
     "value": [
         {
