@@ -61,5 +61,5 @@ Represents an Azure AD NamedLocation. Named Location are customm rules that defi
 > IPv6 range in CIDR format. Inherits from ipRange.
 
 |Property|Type|Description|
-|-|-|
+|-|-|-|
 |`cidrAddress`|`String`|IPv6 address in CIDR format|
