@@ -54,28 +54,17 @@ Here is an example of the request.
 
 ```http
 POST https://graph.microsoft.com/beta/ipNamedLocation/
-Content-Type: application/json
-HTTP/1.1 201 Created
-Content-type: application/json
-POST ~/v1.0/policies/ipNamedLocation/
-{
-    "displayName": "Remote Offices",
-    "isTrusted": true,
-    "ipRanges": [
-        {
-            "@odata.type": "#microsoft.graph.iPv4CidrRange",
-            "cidrAddress": "6.5.4.3/16"
-        },
-        {
-            "@odata.type": "#microsoft.graph.iPv4CidrRange",
-            "cidrAddress": "5.4.3.2/16"
-        },
-        {
-            "@odata.type": "#microsoft.graph.iPv4CidrRange",
-            "cidrAddress": "4.3.2.1/16"
+ {
+            "displayName": "Public Relations Office ",
+            "modifiedDateTime": null,
+            "createdDateTime": null,
+            "isTrusted": false,
+            "ipRanges": [
+                {
+                  "cidrAddress": "12.34.221.11/22"
+                }
+            ]
         }
-    ],
-}
 
 ```
 
