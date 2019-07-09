@@ -19,8 +19,14 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+IPNamedLocation
 ```http
-DELETE /namedLocations/{id}
+DELETE /ipnamedLocations/{id}
+```
+
+```http
+CountryNamedLocation
+DELETE /countrynamedLocations/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -51,11 +57,4 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 204 No Content
 ```
-<!--
-{
-  "type": "#page.annotation",
-  "suppressions": [
-    "Error: /api-reference/beta/api/policy-delete.md:\r\n      Exception processing links.\r\n    System.ArgumentException: Link Definition was null. Link text: !INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)\r\n      at ApiDoctor.Validation.DocFile.get_LinkDestinations()\r\n      at ApiDoctor.Validation.DocSet.ValidateLinks(Boolean includeWarnings, String[] relativePathForFiles, IssueLogger issues, Boolean requireFilenameCaseMatch, Boolean printOrphanedFiles)"
-  ]
-}
--->
+
