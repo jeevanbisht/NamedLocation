@@ -167,3 +167,69 @@ Here is an example of the response.
     ]
 }
 ```
+
+
+
+##### Request
+Here is an example of the request.
+
+```http
+GET https://graph.microsoft.com/beta/countrynamedLocations/<id>
+
+```
+
+##### Response
+Here is an example of the response.
+
+```http
+{
+    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#countryNamedLocations",
+    "@odata.count": 4,
+    "value": [
+        {
+            "id": "18b24242-7d88-4314-ac53-e5a2f39b1b64",
+            "displayName": "Remote Offices",
+            "modifiedDateTime": "2019-06-05T19:30:44.0120563Z",
+            "createdDateTime": "2019-06-05T19:25:10.8867041Z",
+            "countriesAndRegions": [
+                "IN",
+                "US"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "id": "1ce50e62-ab64-4966-9a19-2d609c3205d7",
+            "displayName": "Remote Offices1",
+            "modifiedDateTime": "2019-06-06T22:53:11.3245652Z",
+            "createdDateTime": "2019-06-06T22:53:11.3245652Z",
+            "countriesAndRegions": [
+                "IN"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "id": "105dc8b1-0930-4668-8ffa-1f1d586e3b38",
+            "displayName": " Country Named Location1 ",
+            "modifiedDateTime": "2019-07-09T13:41:03.5983142Z",
+            "createdDateTime": "2019-07-09T13:41:03.5983142Z",
+            "countriesAndRegions": [
+                "US",
+                "GB"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "id": "15b0a9e9-bc14-4db1-9852-b798f3457392",
+            "displayName": " Country Named Location1 ",
+            "modifiedDateTime": "2019-07-09T13:44:05.6758195Z",
+            "createdDateTime": "2019-07-09T13:44:05.6758195Z",
+            "countriesAndRegions": [
+                "US",
+                "GB"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        }
+    ]
+}
+```
+
