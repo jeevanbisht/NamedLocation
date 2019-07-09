@@ -83,6 +83,29 @@ PATCH https://canary.graph.microsoft.com/testidentityprotectionservices/countryn
 
 ```
 
+
+## Example
+The following example updates the subnet Mask.
+
+##### Request
+Here is an example of the request. Where we update the Policy displayName
+PATCH https://graph.microsoft.com/beta/ipnamedlocations/{id}
+
+```http
+PATCH https://canary.graph.microsoft.com/testidentityprotectionservices/ipnamedlocations/09a6271a-8b14-41a3-a191-cea3531b3ed8
+{
+    "displayName": "Remote Offices",
+    "isTrusted": true,
+    "ipRanges": [
+        {
+            "cidrAddress": "6.5.4.3/18"
+        }
+
+    ]
+}
+```
+
+
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
