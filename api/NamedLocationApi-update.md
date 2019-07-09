@@ -40,29 +40,20 @@ PATCH /countrynamedlocations/{id}
 In the request body, provide a JSON object with the parameters that need to be updated. The following table shows the possible parameters.
 
 ## JSON representation
-Here is a sample JSON representation of the microsoft.graph.conditionalAccessApplications Complex type, below are the minimum parameters required for the update operation.
+Here is a sample JSON representation of the countryNamedLocation  type.
 
 ```json
-
 {
-    "conditions": {
-        "applications": {
-            "includeApplications": [
-                "00000002-0000-0ff1-ce00-000000000000"
-            ],
-            "excludeApplications": [],
-            "includeAuthenticationContext": []
-        },
-        "users": {
-            "includeUsers": [
-                "All"
-            ],
-            "excludeUsers": [ "Guests"],
-            "includeGroups": [],
-            "excludeGroups": [],
-            "includeRoles": [],
-            "excludeRoles": []
-        }
+    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#countryNamedLocations/$entity",
+    "id": "18b24242-7d88-4314-ac53-e5a2f39b1b64",
+    "displayName": " Country Named Location1 ",
+    "modifiedDateTime": "2019-07-09T14:01:39.5554284Z",
+    "createdDateTime": "2019-06-05T19:25:10.8867041Z",
+    "countriesAndRegions": [
+        "US",
+        "GB"
+    ],
+    "includeUnknownCountriesAndRegions": false
 }
 ```
 
@@ -71,43 +62,24 @@ Here is a sample JSON representation of the microsoft.graph.conditionalAccessApp
 If successful, this method returns `204 No Content` response code. If unsuccessful, a `4xx` error will be returned with specific details.
 
 ## Example
-The following example updates the definition of the token lifetime policy and sets it as the organization default.
+The following example updates the Country.
 
 ##### Request
 Here is an example of the request. Where we update the Policy displayName
+PATCH https://graph.microsoft.com/beta/countrynamedlocations/{id}
 
 ```http
-PATCH https://graph.microsoft.com/beta/conditionalaccesspolicies/{id}
-Content-Type: application/json
-{
-      "displayName": "Sample - UpdateTest1",
-      "conditions": {
-            "applications": {
-            "includeApplications": [
-                "00000002-0000-0ff1-ce00-000000000000"
-            ],
-            "excludeApplications": [],
-            "includeAuthenticationContext": []
-        },
-        "users": {
-            "includeUsers": [],
-            "excludeUsers": [
-                "Guests"
-            ],
-            "includeGroups": [
-                "796f8da4-21f2-4148-a34b-9735811d5852",
-                "5fad529d-b4a2-4d4d-89c5-e72be11a8ab5"
-            ],
-            "excludeGroups": [
-                "46756a9c-01c0-4526-96e1-5f343c240567"
-            ],
-            "includeRoles": [
-                "cf1c38e5-3621-4004-a7cb-879624dced7c"
-            ],
-            "excludeRoles": []
+PATCH https://canary.graph.microsoft.com/testidentityprotectionservices/countrynamedlocations/18b24242-7d88-4314-ac53-e5a2f39b1b64
+     {
+ 
+    "displayName": " Country Named Location1 ",
+     "countriesAndRegions": [
+        "US",
+        "GB",
+        "IN"
+    ],
+    "includeUnknownCountriesAndRegions": false
         }
-    }
-}
 
 ```
 
@@ -117,11 +89,3 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 204 No Content
 ```
-<!--
-{
-  "type": "#page.annotation",
-  "suppressions": [
-    "Error: /api-reference/beta/api/policy-update.md:\r\n      Exception processing links.\r\n    System.ArgumentException: Link Definition was null. Link text: !INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)\r\n      at ApiDoctor.Validation.DocFile.get_LinkDestinations()\r\n      at ApiDoctor.Validation.DocSet.ValidateLinks(Boolean includeWarnings, String[] relativePathForFiles, IssueLogger issues, Boolean requireFilenameCaseMatch, Boolean printOrphanedFiles)"
-  ]
-}
--->
