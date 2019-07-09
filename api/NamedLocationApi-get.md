@@ -22,7 +22,14 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
+Common EndPoint to query IPNamedLocation and CountryNamedLocation
 GET /namedLocations/{id}
+
+IPNamedLocations
+GET /ipnamedLocations/{id}
+
+CountryNamedLocations
+GET /countyrnamedLocations/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
