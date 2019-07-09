@@ -48,7 +48,7 @@ The following example deletes a policy.
 Here is an example of the request.
 
 ```http
-DELETE https://graph.microsoft.com/beta/namedLocations/8d1eeee9-3695-480d-8e4f-5139cddff38c
+DELETE https://canary.graph.microsoft.com/testidentityprotectionservices/namedlocations/00b32017-8d7c-42d4-81a9-3a94f3b96326
 
 ```
 
