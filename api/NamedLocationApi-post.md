@@ -57,8 +57,9 @@ has escaped double quotes.
 ##### Request
 Here is an example of the request.
 
-```http
+
 Sample : IPNamedLocation 
+```http
  {
   "displayName": "IP Named Locations ",
   "modifiedDateTime": null,
@@ -77,8 +78,9 @@ Sample : IPNamedLocation
 
 ```
 
-```http
+
 Sample : CountryNamedLocation 
+```http
      {
         "displayName": " Country Named Location1 ",
         "countriesAndRegions": [
