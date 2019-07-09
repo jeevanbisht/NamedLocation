@@ -18,6 +18,10 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account) | Policy.ReadWrite.ConditionalAccess    |
 
 ## HTTP request
+NameLocation (Common endpoint)
+```http
+DELETE /namedLocations/{id}
+```
 
 IPNamedLocation
 ```http
