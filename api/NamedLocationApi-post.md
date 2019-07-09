@@ -54,7 +54,7 @@ Here is an example of the request.
 
 ```http
  {
-  "displayName": "Public Relations Office ",
+  "displayName": "IP Named Locations ",
   "modifiedDateTime": null,
   "createdDateTime": null,
   "isTrusted": false,
@@ -65,7 +65,9 @@ Here is an example of the request.
                 {
                  "cidrAddress": "1001:0fc3:23fb:1234::0001/24"
                 }
+                ]
  }
+ 
 
 ```
 
