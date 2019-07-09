@@ -21,9 +21,15 @@ One of the following permissions is required to call this API. To learn more, in
 
 ## HTTP request
 
+IPNamedLocations
 ```http
-PATCH /conditionalaccesspolicies/{id}
+PATCH /ipnamedlocations/{id}
 ```
+CountryNamedLocations
+```http
+PATCH /countrynamedlocations/{id}
+```
+
 ## Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
