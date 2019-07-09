@@ -24,8 +24,9 @@ IPNamedLocation
 DELETE /ipnamedLocations/{id}
 ```
 
-```http
 CountryNamedLocation
+```http
+
 DELETE /countrynamedLocations/{id}
 ```
 ## Request headers
