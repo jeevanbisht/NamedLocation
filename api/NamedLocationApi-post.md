@@ -58,6 +58,7 @@ has escaped double quotes.
 Here is an example of the request.
 
 ```http
+Sample : IPNamedLocation 
  {
   "displayName": "IP Named Locations ",
   "modifiedDateTime": null,
@@ -76,6 +77,17 @@ Here is an example of the request.
 
 ```
 
+```http
+Sample : CountryNamedLocation 
+     {
+        "displayName": " Country Named Location1 ",
+        "countriesAndRegions": [
+                "US",
+                "GB"
+            ],
+        "includeUnknownCountriesAndRegions": false
+        }
+ ```       
 ##### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
