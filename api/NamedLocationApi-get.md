@@ -108,3 +108,62 @@ The response object shown here may be truncated for brevity. All of the properti
     ]
 }
 ```
+
+##### Request
+Here is an example of the request.
+
+```http
+GET https://graph.microsoft.com/beta/ipnamedLocations/<id>
+
+```
+
+##### Response
+Here is an example of the response.
+
+```http
+
+{
+    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#ipNamedLocations",
+    "@odata.count": 2,
+    "value": [
+        {
+            "id": "00b32017-8d7c-42d4-81a9-3a94f3b96326",
+            "displayName": "Remote Offices",
+            "modifiedDateTime": "2019-06-05T19:22:34.4081849Z",
+            "createdDateTime": "2019-06-05T19:22:34.4081849Z",
+            "isTrusted": true,
+            "ipRanges": [
+                {
+                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
+                    "cidrAddress": "6.5.4.3/16"
+                },
+                {
+                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
+                    "cidrAddress": "5.4.3.2/16"
+                },
+                {
+                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
+                    "cidrAddress": "4.3.2.1/16"
+                }
+            ]
+        },
+        {
+            "id": "02a51ffb-dfe5-455d-9d04-fe6811c7ed6b",
+            "displayName": "IP Named Locations ",
+            "modifiedDateTime": "2019-07-09T13:35:53.3996163Z",
+            "createdDateTime": "2019-07-09T13:35:53.3996163Z",
+            "isTrusted": false,
+            "ipRanges": [
+                {
+                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
+                    "cidrAddress": "12.34.221.11/22"
+                },
+                {
+                    "@odata.type": "#microsoft.graph.iPv6CidrRange",
+                    "cidrAddress": "1001:0fc3:23fb:1234::0001/24"
+                }
+            ]
+        }
+    ]
+}
+```
