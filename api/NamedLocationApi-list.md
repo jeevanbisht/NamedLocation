@@ -132,10 +132,30 @@ HTTP/1.1 200 OK
 Request
 Here is an example of the request.
 ```http
-GET https://graph.microsoft.com/beta/namedLocations/
+GET https://graph.microsoft.com/beta/ipnamedLocations/
 ```
 Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 ```http
 HTTP/1.1 200 OK
+
+{
+    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#ipNamedLocations",
+    "@odata.count": 1,
+    "value": [
+        {
+            "id": "09a6271a-8b14-41a3-a191-cea3531b3ed8",
+            "displayName": "Remote Offices",
+            "modifiedDateTime": "2019-07-09T14:07:06.359865Z",
+            "createdDateTime": "2019-07-09T14:06:12.2198099Z",
+            "isTrusted": true,
+            "ipRanges": [
+                {
+                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
+                    "cidrAddress": "6.5.4.3/18"
+                }
+            ]
+        }
+    ]
+}
 ```
