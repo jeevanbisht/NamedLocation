@@ -20,7 +20,14 @@ One of the following permissions is required to call this API. To learn more, in
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-GET /namedLocations/
+Common EndPoint to query IPNamedLocation and CountryNamedLocation
+GET /namedLocations/{id}
+
+IPNamedLocations
+GET /ipnamedLocations/{id}
+
+CountryNamedLocations
+GET /countyrnamedLocations/{id}
 ```
 ## Request headers
 | Name       | Type | Description|
@@ -122,15 +129,3 @@ HTTP/1.1 200 OK
 }
 
 ```
-<!--
-{
-  "type": "#page.annotation",
-  "suppressions": [
-    "Error: /api-reference/beta/api/policy-list.md:\r\n      Exception processing links.\r\n    System.ArgumentException: Link Definition was null. Link text: !INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)\r\n      at ApiDoctor.Validation.DocFile.get_LinkDestinations()\r\n      at ApiDoctor.Validation.DocSet.ValidateLinks(Boolean includeWarnings, String[] relativePathForFiles, IssueLogger issues, Boolean requireFilenameCaseMatch, Boolean printOrphanedFiles)"
-  ]
-}
--->
-
-
-
-
