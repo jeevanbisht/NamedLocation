@@ -56,74 +56,72 @@ Here is an example of the response. Note: The response object shown here may be 
 
 ```http
 HTTP/1.1 200 OK
+
 {
-    "@odata.context": "https://graph.microsoft.com/beta/adata#namedLocation",
-    "values": [
+    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#namedLocations",
+    "@odata.count": 5,
+    "value": [
         {
-            "@odata.type": "#microsoft.graph.ipNamedLocation"
-            "id": "91a40136-f30e-4154-8332-1c576b5bab81",
-            "createdDateTime": "2018-01-25T12:34:59Z",
-            "modifiedDateTime": "2018-01-28T19:23:04Z",
-            "displayName": "Corporate Network",
+            "@odata.type": "#microsoft.graph.countryNamedLocation",
+            "id": "18b24242-7d88-4314-ac53-e5a2f39b1b64",
+            "displayName": " Country Named Location1 ",
+            "modifiedDateTime": "2019-07-09T14:03:37.4501821Z",
+            "createdDateTime": "2019-06-05T19:25:10.8867041Z",
+            "countriesAndRegions": [
+                "US",
+                "GB",
+                "IN"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "@odata.type": "#microsoft.graph.countryNamedLocation",
+            "id": "1ce50e62-ab64-4966-9a19-2d609c3205d7",
+            "displayName": "Remote Offices1",
+            "modifiedDateTime": "2019-06-06T22:53:11.3245652Z",
+            "createdDateTime": "2019-06-06T22:53:11.3245652Z",
+            "countriesAndRegions": [
+                "IN"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "@odata.type": "#microsoft.graph.countryNamedLocation",
+            "id": "105dc8b1-0930-4668-8ffa-1f1d586e3b38",
+            "displayName": " Country Named Location1 ",
+            "modifiedDateTime": "2019-07-09T13:41:03.5983142Z",
+            "createdDateTime": "2019-07-09T13:41:03.5983142Z",
+            "countriesAndRegions": [
+                "US",
+                "GB"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "@odata.type": "#microsoft.graph.countryNamedLocation",
+            "id": "15b0a9e9-bc14-4db1-9852-b798f3457392",
+            "displayName": " Country Named Location1 ",
+            "modifiedDateTime": "2019-07-09T13:44:05.6758195Z",
+            "createdDateTime": "2019-07-09T13:44:05.6758195Z",
+            "countriesAndRegions": [
+                "US",
+                "GB"
+            ],
+            "includeUnknownCountriesAndRegions": false
+        },
+        {
+            "@odata.type": "#microsoft.graph.ipNamedLocation",
+            "id": "09a6271a-8b14-41a3-a191-cea3531b3ed8",
+            "displayName": "Remote Offices",
+            "modifiedDateTime": "2019-07-09T14:07:06.359865Z",
+            "createdDateTime": "2019-07-09T14:06:12.2198099Z",
             "isTrusted": true,
             "ipRanges": [
                 {
                     "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "1.2.3.4/24"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "12.34.56.78/16"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv6CidrRange",
-                    "cidrAddress": "1001:0fc3:23fb:1234::0001/24"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "0.1.2.3/16"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv6CidrRange",
-                    "cidrAddress": "1002:abcd:0987::1234::0001/24"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "4.3.2.1/24"
+                    "cidrAddress": "6.5.4.3/18"
                 }
-            ],
-        },
-        {
-            "@odata.type": "#microsoft.graph.countryNamedLocation"
-            "id": "8d1eeee9-3695-480d-8e4f-5139cddff38c",
-            "createdDateTime": "2018-02-05T09:28:03Z",
-            "modifiedDateTime": "2018-02-05T09:28:03Z",
-            "displayName": "Banned Countries",
-            "includeUnknownCountriesAndRegions": true,
-            "countriesAndRegions": [
-                "Russia",
-                "China",
-                "North Korea",
-                "Nigeria"
             ]
-        },
-        {
-            "@odata.type": "#microsoft.graph.ipNamedLocation"
-            "id": "a90c20af-a36d-4370-afef-efcfc7c64300",
-            "createdDateTime": "2018-03-08T15:42:20Z",
-            "modifiedDateTime": "2018-03-08T15:42:20Z",
-            "displayName": "Partner IP Ranges",
-            "isTrusted": false,
-            "ipRanges": [
-                {
-                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "9.8.7.6/16"
-                },
-                {
-                    "@odata.type": "#microsoft.graph.iPv4CidrRange",
-                    "cidrAddress": "8.7.6.5/24"
-                }
-            ],
         }
     ]
 }
