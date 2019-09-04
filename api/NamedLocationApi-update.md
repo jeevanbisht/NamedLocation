@@ -1,33 +1,28 @@
 ---
-title: "Update Policy"
-description: "Update properties in a preexisting Conditional Access Policy."
+title: "Update Named Location"
+description: "Update properties of an existing named location"
 localization_priority: Normal
 ---
 
-# Update Policy
+# Update Named Location
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update properties in a preexisting [NamedLocation Policy](../resources/NamedLocation.md).
+Update properties of [NamedLocation](../resources/NamedLocation.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Directory.AccessAsUser.All    |
+|Delegated (work or school account) | Policy.ReadWrite.ConditionalAccess    |
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | Not supported. |
 
 ## HTTP request
 
-IPNamedLocations
 ```http
-PATCH /ipnamedlocations/{id}
-```
-CountryNamedLocations
-```http
-PATCH /countrynamedlocations/{id}
+PATCH /namedLocations/{id}
 ```
 
 ## Request headers
@@ -37,18 +32,36 @@ PATCH /countrynamedlocations/{id}
 | Content-Type | application/json  | Nature of the data in the body of an entity. Required. |
 
 ## Request body
-In the request body, provide a JSON object with the parameters that need to be updated. The following table shows the possible parameters.
+In the request body, provide a JSON object with the parameters that need to be updated. The following JSON representation shows the possible parameters for IP named location type and country named location type.
 
 ## JSON representation
-Here is a sample JSON representation of the countryNamedLocation  type.
+
+#### ipNamedLocation
 
 ```json
 {
-    "@odata.context": "https://canary.graph.microsoft.com/testidentityprotectionservices/$metadata#countryNamedLocations/$entity",
-    "id": "18b24242-7d88-4314-ac53-e5a2f39b1b64",
-    "displayName": " Country Named Location1 ",
-    "modifiedDateTime": "2019-07-09T14:01:39.5554284Z",
-    "createdDateTime": "2019-06-05T19:25:10.8867041Z",
+    "@odata.type": "#microsoft.graph.ipNamedLocation",
+    "displayName": "IP Named Locations",
+    "isTrusted": false,
+    "ipRanges": [
+        {
+            "@odata.type": "#microsoft.graph.iPv4CidrRange",
+            "cidrAddress": "12.34.221.11/22"
+        },
+        {
+            "@odata.type": "#microsoft.graph.iPv6CidrRange",
+            "cidrAddress": "2001:0:9d38:90d6:0:0:0:0/63"
+        }
+    ]
+}
+```
+
+#### countryNamedLocation
+
+```json
+{
+    "@odata.type": "#microsoft.graph.countryNamedLocation",
+    "displayName": "Country Named Location",
     "countriesAndRegions": [
         "US",
         "GB"
@@ -62,52 +75,56 @@ Here is a sample JSON representation of the countryNamedLocation  type.
 If successful, this method returns `204 No Content` response code. If unsuccessful, a `4xx` error will be returned with specific details.
 
 ## Example
-The following example updates the Country.
+The following examples update certain properties of an IP named location and a country named location.
+
+#### ipNamedLocation
 
 ##### Request
-Here is an example of the request. Where we update the Policy displayName
-PATCH https://graph.microsoft.com/beta/countrynamedlocations/{id}
 
 ```http
-PATCH https://canary.graph.microsoft.com/testidentityprotectionservices/countrynamedlocations/18b24242-7d88-4314-ac53-e5a2f39b1b64
-     {
- 
-    "displayName": " Country Named Location1 ",
-     "countriesAndRegions": [
-        "US",
-        "GB",
-        "IN"
-    ],
-    "includeUnknownCountriesAndRegions": false
-        }
+PATCH https://graph.microsoft.com/beta/namedLocations/{id}
+Content-Type: application/json
 
-```
-
-
-## Example
-The following example updates the subnet Mask.
-
-##### Request
-Here is an example of the request. Where we update the Policy displayName
-PATCH https://graph.microsoft.com/beta/ipnamedlocations/{id}
-
-```http
-PATCH https://canary.graph.microsoft.com/testidentityprotectionservices/ipnamedlocations/09a6271a-8b14-41a3-a191-cea3531b3ed8
 {
+    "@odata.type": "#microsoft.graph.ipNamedLocation",
     "displayName": "Remote Offices",
     "isTrusted": true,
     "ipRanges": [
         {
+            "@odata.type": "#microsoft.graph.iPv4CidrRange",
             "cidrAddress": "6.5.4.3/18"
         }
 
     ]
 }
 ```
+##### Response
 
+```http
+HTTP/1.1 204 No Content
+```
+
+#### countryNamedLocation
+
+##### Request
+
+```http
+PATCH https://graph.microsoft.com/beta/namedLocations/{id}
+Content-Type: application/json
+
+{
+    "@odata.type": "#microsoft.graph.countryNamedLocation",
+    "displayName": "Country Named Location - Updated",
+    "countriesAndRegions": [
+        "US",
+        "GB",
+        "IN"
+    ],
+    "includeUnknownCountriesAndRegions": true
+}
+```
 
 ##### Response
-Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
 ```http
 HTTP/1.1 204 No Content

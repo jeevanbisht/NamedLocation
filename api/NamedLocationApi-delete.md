@@ -1,6 +1,6 @@
 ---
-title: "Delete a Named Location Entity."
-description: "Delete a Named Location Entity."
+title: "Delete Named Location"
+description: "Delete a named location."
 localization_priority: Normal
 ---
 
@@ -8,7 +8,7 @@ localization_priority: Normal
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [Named Location Entity](../resources/NamedLocation.md).
+Delete a [Named Location](../resources/NamedLocation.md).
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -16,23 +16,15 @@ One of the following permissions is required to call this API. To learn more, in
 |Permission type      | Permissions (from least to most privileged)              |
 |:--------------------|:---------------------------------------------------------|
 |Delegated (work or school account) | Policy.ReadWrite.ConditionalAccess    |
+|Delegated (personal Microsoft account) | Not supported.    |
+|Application | Not supported. |
+
 
 ## HTTP request
-NameLocation (Common endpoint)
 ```http
 DELETE /namedLocations/{id}
 ```
 
-IPNamedLocation
-```http
-DELETE /ipnamedLocations/{id}
-```
-
-CountryNamedLocation
-```http
-
-DELETE /countrynamedLocations/{id}
-```
 ## Request headers
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
@@ -46,20 +38,18 @@ Do not supply a request body for this method.
 If successful, this method returns `204 No Content` response code. If unsuccessful...
 
 ## Example
-The following example deletes a policy.
+The following example deletes a named location.
 
 ##### Request
 Here is an example of the request.
 
 ```http
-DELETE https://canary.graph.microsoft.com/testidentityprotectionservices/namedlocations/00b32017-8d7c-42d4-81a9-3a94f3b96326
-
+DELETE https://graph.microsoft.com/beta/namedLocations/{id}
 ```
 
 ##### Response
-Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
+Here is an example of the response.
 
 ```http
 HTTP/1.1 204 No Content
 ```
-
