@@ -57,8 +57,8 @@ Note: The response object shown here may be truncated for brevity. All of the pr
     "@odata.type": "#microsoft.graph.ipNamedLocation",
     "id": "6af5a63d-4201-492c-b71b-b47915a63d11",
     "displayName": "IP Named Location",
-    "modifiedDateTime": null,
-    "createdDateTime": null,
+    "modifiedDateTime": "2019-07-09T14:07:06.359865Z",
+    "createdDateTime": "2019-07-09T14:06:12.2198099Z",
     "isTrusted": true,
     "ipRanges": [
         {
