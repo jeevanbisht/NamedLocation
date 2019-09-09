@@ -18,7 +18,7 @@ Represents an Azure AD NamedLocation. Named Location are customm rules that defi
 | [Create](../api/NamedLocationApi-post.md) 	| Named Location | Create a new Named Location object. |
 | [Update](../api/NamedLocationApi-update.md)  |	None	| Update Named Location object. |
 | [Delete](../api/NamedLocationApi-delete.md)  |	None	| Delete Named Location object. |
-| [List](../api/NamedLocationApi-get.md)   	| Named Location | Collection of all Named Location objects in the organization. |
+| [List](../api/NamedLocationApi-list.md)   	| Named Location | Collection of all Named Location objects in the organization. |
 
 
 # Named Location 
