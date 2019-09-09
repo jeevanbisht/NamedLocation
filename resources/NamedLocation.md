@@ -14,7 +14,7 @@ Represents an Azure AD NamedLocation. Named Location are customm rules that defi
 
 | Method | Return  Type | Description        |
 |:---------------------|:----------|:-------|
-| Get 	  | Named Location | Read properties of a Named Location  object. |
+| Get (../api/CAPolicies-get.md)	  | Named Location | Read properties of a Named Location  object. |
 | Create 	| Named Location | Create a new Named Location object. |
 | Update  |	None	| Update Named Location object. |
 | Delete  |	None	| Delete Named Location object. |
